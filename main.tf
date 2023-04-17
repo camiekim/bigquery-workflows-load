@@ -192,8 +192,11 @@ EOF
 // Code bucket
 resource "google_storage_bucket" "gcf-bucket" {
   name = "${var.project_id}-function-code"
-  location = "US"
   project = var.project_id
+  location      = "US"
+  force_destroy = true
+
+  uniform_bucket_level_access = true
 }
 
 resource "google_storage_bucket_object" "gcf-archive" {
