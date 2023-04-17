@@ -192,6 +192,7 @@ EOF
 // Code bucket
 resource "google_storage_bucket" "gcf-bucket" {
   name = "${var.project_id}-function-code"
+  location = "US"
   project = var.project_id
 }
 
