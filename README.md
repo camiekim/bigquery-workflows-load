@@ -5,6 +5,6 @@ For detailed steps, refer to the tutorial: [Load data from Cloud Storage to BigQ
 Contents of this repository:
 
 * `main.tf`: Terraform template to set up the demo.
-* `file_change_handler`: Cloud Function trigger (Python 3.7) to handle [object finalize](https://cloud.google.com/functions/docs/calling/storage#object_finalize) events from Cloud Storage.
+* `file_change_handler`: Cloud Function trigger (Python 3.7) to handle [`object finalized`](https://cloud.google.com/functions/docs/calling/storage#object_finalize) events from Cloud Storage.
 * `workflow_handlers`: Cloud Functions to handle BigQuery jobs and the workflow YAML.
 * `generator`: Script (Python 3.7) to generate AVRO files and upload to a Cloud Storage bucket.
